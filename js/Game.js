@@ -20,13 +20,13 @@
 
         function getRandomPhrase(){
           let randomNumber = Math.floor(Math.random()*5)+1;
-                let randomPhrase = newPhrases[randomNumber].phrase;
+                let randomPhrase = newPhrases.phrase[randomNumber];
                   return randomPhrase;
 
 
 
-            }
-            this.phrases = createPhrases();
+            };
+
 
         };
    };
