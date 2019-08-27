@@ -3,9 +3,19 @@
  * app.js */
 //const phrase = new Phrase('Life is like a box of chocolates');
 //console.log(`${phrase.phrase}`);
-const game = new Game();
+//const game = new Game();
 
 //game.phrases.forEach((phrase, index)=>{
   //console.log(`${index}- phrase: ${phrase.phrase}`);
 
 //})
+
+
+const logPhrase = (phraseGenerator) => {
+    console.log(phraseGenerator);
+}
+
+
+const game = new Game();
+
+logPhrase(game.getRandomPhrase());
