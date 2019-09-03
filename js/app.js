@@ -11,11 +11,10 @@
 //})
 
 
-const logPhrase = (phraseGenerator) => {
-    console.log(phraseGenerator);
-}
+
 
 
 const game = new Game();
-
-logPhrase(game.getRandomPhrase());
+console.log(game.getRandomPhrase());
+const phrase = new Phrase(game.getRandomPhrase());
+console.log(`${phrase.phrase}`);
