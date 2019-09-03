@@ -32,12 +32,13 @@ return newPhrases;
 }
 
 
+
   //choosing a random phrase
   getRandomPhrase(){
 
     let numberPhrase = Math.floor(Math.random()*this.phrases.length);
-    let phraseGenerator = this.phrases[numberPhrase];
-    return phraseGenerator;
+    this.phrases[numberPhrase];
+    return this.phrases[numberPhrase];
   };
 
 }
