@@ -2,33 +2,42 @@
  * Project 4 - OOP Game App
  * Game.js */
 //creating the class object
+"use strict"
+
  class Game{
    constructor(){
       //number of times the client has missed
         this.missed = 0;
-      //active phrase within the game currently
-        this.activePhrase = `null`;
         //calling the method createPhrase() to generate a phrase
-        this.phrases = createPhrase();
+        this.phrases= this.createPhrases();
+        //active phrase within the game currently
+          this.activePhrase = `null`;
+
 
    }
    //creating an array of object phrases
-   createPhrases(){
-  let newPhrases =[
-     {phrasez:"Wait till they get a load of me..."},
-     {phrasez:"The force will be with you, always..."},
-     {phrasez:"How many times do I have to say it?"},
-     {phrasez:"Pizza Time ! "},
-     {phrasez:"It can't rain all the time..."}
-  ];
-   return newPhrases;
 
-}();
+   createPhrases(){
+     const newPhrases =[
+     {phrase:"Wait till they get a load of me..."},
+     {phrase:"The force will be with you, always..."},
+     {phrase:"How many times do I have to say it?"},
+     {phrase:"Pizza Time ! "},
+     {phrase:"It can't rain all the time..."}
+  ];
+
+
+return newPhrases;
+
+}
+
+
   //choosing a random phrase
   getRandomPhrase(){
-    let numberPhrase = Math.floor(Math.random()*5)+1;
-    let phraseGenerator = newPhrases[numberPhrase];
-    return phraseGenerator;
-  }
 
-};
+    let numberPhrase = Math.floor(Math.random()*this.phrases.length);
+    let phraseGenerator = this.phrases[numberPhrase];
+    return phraseGenerator;
+  };
+
+}
