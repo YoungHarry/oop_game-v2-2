@@ -9,12 +9,3 @@
   //console.log(`${index}- phrase: ${phrase.phrase}`);
 
 //})
-
-
-
-
-
-const game = new Game();
-console.log(game.getRandomPhrase());
-const phrase = new Phrase(game.getRandomPhrase());
-console.log(`${phrase.phrase}`);
