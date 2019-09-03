@@ -34,6 +34,26 @@
 
     } */
 
+    addPhrasetoDisplay(){
+      let getElement = document.querySelector('#phrase');
+      let liElement = getElement.firstElementChild;
+
+      let newWords = this.phrase.split("")
+      if(newWords ==(/[a-z,A-Z]/)){
+          newWords.forEach((item)=>{
+            let li = document.createElement("li");
+            li.className = 'hide letter' + character;
+            li.textContent = " character";
+            liElement.append('li');
+
+
+          })
+      }
+
+
+
+    }
+
 
 
 
